@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Quiz - Enter Your Name</title>
+    <link rel="stylesheet" href="src/asset/stylesheets/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-logo">
+          <a href="index.html">Logo</a>
+          <!-- Placeholder for logo -->
+        </div>
+
+        <button
+          class="hamburger-menu"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="topscores.html">Top Score</a></li>
+          </ul>
+          <div class="nav-admin">
+            <a href="admin.html" class="btn-admin-nav">Admin</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="landing-page">
+      <!-- Name Input Screen (shown first) -->
+      <section id="name-screen" class="view active">
+        <h1>Tech Whiz Quiz</h1>
+        <h2>Enter Your Name to Begin</h2>
+        <div class="name-input-container">
+          <input
+            type="text"
+            id="player-name"
+            placeholder="Your name..."
+            aria-label="Enter your name"
+          />
+          <button id="name-submit" class="btn-primary">Continue</button>
+        </div>
+      </section>
+
+      <!-- Category Selection Screen (hidden initially) -->
+      <section id="category-selection-view" class="view">
+        <h1>Tech Whiz Quiz</h1>
+        <h2>Welcome, <span id="display-name"></span>!</h2>
+        <h3>Choose a Category to Start</h3>
+        <div>
+          <ul id="category-list">
+            <li>
+              <button class="category-btn" data-category="javascript">
+                Web Development
+              </button>
+            </li>
+            <li>
+              <button class="category-btn" data-category="html-css">
+                Computer Fundamentals
+              </button>
+            </li>
+            <li>
+              <button class="category-btn" data-category="git">
+                Programming Concepts
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="index.html" class="back">Back to Home</a></p>
+      <p>© 2024 Tech Quiz App</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script type="module" src="src/quiz/main.js"></script>
+  </body>
+</html>
